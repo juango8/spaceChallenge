@@ -2,9 +2,9 @@ package models
 
 import interfaces.SpaceShip
 
-open class Rocket: SpaceShip {
+open class Rocket : SpaceShip {
 
-    private val itemList:MutableList<Item> = mutableListOf()
+    private val itemList: MutableList<Item> = mutableListOf()
     var cost = 0
     var weight = 0.0
     var actualCargoWeight = 0.0

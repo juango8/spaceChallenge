@@ -60,7 +60,7 @@ class Simulation {
     // runSimulation then returns the total budget required to send all rockets (including the crashed ones).
     fun runSimulation(rocketList: ArrayList<Rocket>): Int {
         var totalBudget = 0
-        for (rocket in rocketList){
+        for (rocket in rocketList) {
             do {
                 totalBudget += rocket.cost
             } while (rocket.launch() && rocket.land())
