@@ -25,11 +25,11 @@ class Simulation {
     // are fully loaded.
     fun loadU1(itemList: ArrayList<Item>): ArrayList<U1> {
         val u1RocketList = ArrayList<U1>()
+        var iteratorItemList = 0
 
-        while (itemList.isNotEmpty()) {
+        while (iteratorItemList<itemList.size) {
             val rocket = U1()
-            var iteratorItemList = 0
-            while (rocket.canCarry(itemList[iteratorItemList])) {
+            while (iteratorItemList<itemList.size && rocket.canCarry(itemList[iteratorItemList])) {
                 rocket.carry(itemList[iteratorItemList])
                 iteratorItemList += 1
             }
@@ -40,18 +40,17 @@ class Simulation {
 
     fun loadU2(itemList: ArrayList<Item>): ArrayList<U2> {
         val u2RocketList = ArrayList<U2>()
+        var iteratorItemList = 0
 
-        while (itemList.isNotEmpty()) {
+        while (iteratorItemList<itemList.size) {
             val rocket = U2()
-            var iteratorItemList = 0
-            while (rocket.canCarry(itemList[iteratorItemList])) {
+            while (iteratorItemList<itemList.size && rocket.canCarry(itemList[iteratorItemList])) {
                 rocket.carry(itemList[iteratorItemList])
                 iteratorItemList += 1
             }
             u2RocketList.add(rocket)
         }
         return u2RocketList
-
     }
 
     // this method takes an ArrayList of Rockets and calls launch and land methods for each of the rockets in the ArrayList.
