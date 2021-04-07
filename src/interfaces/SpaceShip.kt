@@ -9,7 +9,7 @@ interface SpaceShip {
     fun land(): Boolean
     // takes an Item as an argument,
     // returns true if the rocket can carry such item or false if it will exceed the weight limit
-    fun canCarry(newItem:Item): Boolean
+    fun canCarry(newItem:Item = Item("nn",0)): Boolean
     // takes an Item object as an argument,
     // updates the current weight of the rocket.
     fun carry(newItem: Item)
