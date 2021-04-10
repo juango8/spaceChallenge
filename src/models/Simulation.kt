@@ -24,7 +24,7 @@ class Simulation {
     // filling that one until all items are loaded. The method then returns the ArrayList of those U1 rockets that
     // are fully loaded.
     fun loadU1(itemList: ArrayList<Item>): ArrayList<U1> {
-        val u1RocketList = ArrayList<U1>()
+        val u1RocketList: ArrayList<U1>? = ArrayList<U1>()
         var iteratorItemList = 0
 
         while (iteratorItemList < itemList.size) {
@@ -33,9 +33,9 @@ class Simulation {
                 rocket.carry(itemList[iteratorItemList])
                 iteratorItemList += 1
             }
-            u1RocketList.add(rocket)
+            u1RocketList?.add(rocket)
         }
-        return u1RocketList
+        return u1RocketList ?: arrayListOf()
     }
 
     fun loadU2(itemList: ArrayList<Item>): ArrayList<U2> {
