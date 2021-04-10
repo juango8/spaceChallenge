@@ -2,13 +2,14 @@ package models
 
 import interfaces.SpaceShip
 
-open class Rocket : SpaceShip {
+open class Rocket(
+    var cost: Int,
+    var weight: Double,
+    var actualCargoWeight: Double,
+    var capacity: Double
+) : SpaceShip {
 
     private val itemList: MutableList<Item> = mutableListOf()
-    var cost = 0
-    var weight = 0.0
-    var actualCargoWeight = 0.0
-    var capacity = 0.0
 
 
     override fun launch(): Boolean {
