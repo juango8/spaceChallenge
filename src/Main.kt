@@ -9,7 +9,6 @@ fun main() {
     val listOfU1sPhase1 = simulation.loadU1(dataPhase1)
     val listOfU1sPhase2 = simulation.loadU1(dataPhase2)
 
-
     val totalBudgetU1 = simulation.runSimulation(listOfU1sPhase1 as ArrayList<Rocket>) +
             simulation.runSimulation(listOfU1sPhase2 as ArrayList<Rocket>)
 

@@ -27,9 +27,9 @@ class Simulation {
         val u1RocketList = ArrayList<U1>()
         var iteratorItemList = 0
 
-        while (iteratorItemList<itemList.size) {
+        while (iteratorItemList < itemList.size) {
             val rocket = U1()
-            while (iteratorItemList<itemList.size && rocket.canCarry(itemList[iteratorItemList])) {
+            while (iteratorItemList < itemList.size && rocket.canCarry(itemList[iteratorItemList])) {
                 rocket.carry(itemList[iteratorItemList])
                 iteratorItemList += 1
             }
@@ -42,9 +42,9 @@ class Simulation {
         val u2RocketList = ArrayList<U2>()
         var iteratorItemList = 0
 
-        while (iteratorItemList<itemList.size) {
+        while (iteratorItemList < itemList.size) {
             val rocket = U2()
-            while (iteratorItemList<itemList.size && rocket.canCarry(itemList[iteratorItemList])) {
+            while (iteratorItemList < itemList.size && rocket.canCarry(itemList[iteratorItemList])) {
                 rocket.carry(itemList[iteratorItemList])
                 iteratorItemList += 1
             }
